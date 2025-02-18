@@ -42,9 +42,8 @@ func formatLastAnalysisDate(date interface{}) string {
 	switch v := date.(type) {
 	case string:
 		return v
-	case float64: // Assuming it's a Unix timestamp in float64 format
-		// Convert timestamp to a human-readable date if needed
-		return fmt.Sprintf("%d", int64(v)) // You could format this as a date string if preferred
+	case float64:
+		return fmt.Sprintf("%d", int64(v))
 	default:
 		return "Unknown"
 	}
@@ -52,7 +51,7 @@ func formatLastAnalysisDate(date interface{}) string {
 
 func ThreatIntel(hash string) (*VirusTotalResponse, error) {
 	// Retrieve the API key from the environment variable
-	apiKey := "e7dda080e6827add067eb2e8e7f23cbdf806972064b8be8df7d3e80b8ac71324"
+	apiKey := ""
 	if apiKey == "" {
 		return nil, fmt.Errorf("VIRUSTOTAL_API_KEY environment variable not set")
 	}
