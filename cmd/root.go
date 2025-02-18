@@ -23,10 +23,10 @@ func printBanner() {
 
 func printCommandTable() {
 	data := [][]string{
-		{"user-config", "User configurtaion", "cybot user-config"},
+		{"user", "User configurtaion", "cybot user"},
 		{"scan", "Scan ports", "cybot scan <IP> <startPort> <endPort> <protocol>"},
-		// {"network", "Scan local network", "cybot --network"},
-		// {"info", "Get system info", "cybot --info"},
+		{"net-scan", "Scan devices locally", "cybot net-scan"},
+		{"scan-p", "Scan all the running processes.", "cybot scan-p"},
 		// {"firewall", "Check firewall status", "cybot --firewall"},
 	}
 
